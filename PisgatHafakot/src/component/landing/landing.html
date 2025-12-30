@@ -1,0 +1,109 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>צילום אירועים + אטרקציות</h1>
+    <p>
+      חתונות • בר מצווה • חינה • אירועים פרטיים<br />
+      צילום מקצועי | מגנטים | רחפן | סלואו
+    </p>
+
+    <a [href]="whatsappLink" target="_blank" class="cta">
+      📲 להצעת מחיר ב-WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <h2>למה לבחור בי?</h2>
+
+    <ul class="why-list">
+      <li>✔ ניסיון של שנים בצילום אירועים</li>
+      <li>✔ חבילות צילום + אטרקציות במחיר משתלם</li>
+      <li>✔ ציוד מתקדם ותוצאה ברמה גבוהה</li>
+      <li>✔ יחס אישי וליווי מלא מהשיחה הראשונה</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="container">
+    <h2>תיק עבודות</h2>
+
+    <div class="categories">
+      <button
+        *ngFor="let cat of categories"
+        (click)="setCategory(cat)"
+        [class.active]="selectedCategory === cat"
+      >
+        {{ cat }}
+      </button>
+    </div>
+  </div>
+
+  <div class="gallery-wrapper">
+    <button class="scroll-btn left" (click)="scrollGallery(-1)">‹</button>
+
+    <div class="gallery" #gallery>
+      <img
+        *ngFor="let img of filteredImages"
+        [src]="img.src"
+        [alt]="img.category"
+        class="gallery-img"
+      />
+    </div>
+
+    <button class="scroll-btn right" (click)="scrollGallery(1)">›</button>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="container">
+    <h2>חבילות צילום</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>חבילת צילום מלאה</h3>
+        <p>צלם מקצועי • עריכה • אלבום דיגיטלי</p>
+      </div>
+
+      <div class="card">
+        <h3>צילום + מגנטים</h3>
+        <p>מגנטים ללא הגבלה • הדפסה במקום</p>
+      </div>
+
+      <div class="card">
+        <h3>צילום + אטרקציות</h3>
+        <p>בלוקים • סלואו • רחפן • עמדת צילום</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-me">
+  <div class="container about-grid">
+    <img src="assets/baruch.JPG" alt="ברוך סויונוב" class="my-photo" />
+
+    <div>
+      <h2>עליי</h2>
+      <p>
+        אני ברוך סויונוב, צלם אירועים עם ניסיון עשיר,
+        מתמחה בלתפוס רגעים אמיתיים, רגשיים ובלתי נשכחים.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>רוצים אירוע בלתי נשכח?</h2>
+    <a [href]="whatsappLink" target="_blank" class="cta big">
+      📸 דברו איתי עכשיו
+    </a>
+  </div>
+</section>

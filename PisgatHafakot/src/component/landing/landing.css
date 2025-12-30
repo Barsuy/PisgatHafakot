@@ -1,0 +1,207 @@
+/* ===== בסיס ===== */
+body {
+  margin: 0;
+  font-family: 'Heebo', 'Assistant', sans-serif;
+  direction: rtl;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 10px 0;
+}
+
+/* ===== כותרות ===== */
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* ===== HERO ===== */
+.hero {
+ /* max-height: 19vh;*/
+  background: linear-gradient(to bottom, #000, #222);
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cta {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 16px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.cta.big {
+  font-size: 1.3rem;
+}
+
+/* ===== WHY ===== */
+.why {
+  background: #f7f7f7;
+  padding-top: 1px;
+
+}
+
+.why-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.why-list li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* ===== PORTFOLIO ===== */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.categories button.active {
+  background: #25d366;
+  color: #fff;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 60px 40px;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-img {
+  flex: 0 0 calc(33.333% - 20px);
+  height: 560px;
+  background: #000;
+  object-fit: contain;
+  border-radius: 16px;
+  scroll-snap-align: center;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* ===== PACKAGES ===== */
+.packages {
+  background: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.my-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+/* ===== רספונסיבי ===== */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    flex: 0 0 85%;
+    height: 420px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
